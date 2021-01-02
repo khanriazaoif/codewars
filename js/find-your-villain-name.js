@@ -1,3 +1,4 @@
+
 const month = {
     January: 'The Evil',
     February: 'The Vile',
@@ -39,6 +40,7 @@ const month = {
       if (firstName === "October") return `${month.October}`;
       if (firstName === "November") return `${month.November}`;
       if (firstName === "December") return `${month.December}`;
+      
     };
   
   const lastNameFunction = (lastName) => {
@@ -53,16 +55,12 @@ const month = {
     if (lastName === 8) return `${date[8]}`;
     if (lastName === 9) return `${date[9]}`;
   };
-  
-  // console.log(firstNameFunction("February"));
-  // console.log(lastNameFunction(0));
-  
-  const villainName = (firstNameFunction, lastNameFunction) => {
-    console.log(firstNameFunction);
-    // console.log(firstNameFunction);
-    if (firstNameFunction === firstNameFunction)
-      return `${firstNameFunction} ${lastNameFunction}`;
+
+
+  const villainName = (firstName, lastName) => {
+      const fN = firstNameFunction(firstName);
+      const lN = (lastNameFunction(lastName));
+      return `${fN} ${lN}`;
   };
-  
-  console.log(firstNameFunction('January', '18'));
-  
+
+console.log(villainName('March', 7));
