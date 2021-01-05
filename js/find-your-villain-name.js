@@ -64,9 +64,60 @@
 
 // console.log(villainName('March', 18));
 
-
 function getVillainName(birthday){
   const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
   const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
 
+  const birthdayMonthArray = (birthday) => {
+    let bDay2 = birthday;
+    console.log(typeof(bDay2));
+    let bday = bDay2.split(' ');
+    let month = bday[0];
+    return month;
+  }
+  
+  const birthdayDayArray = (birthday) => {
+    let bDay2 = birthday;
+    let bday = bDay2.split('');
+    let lastDigit = bday.pop();
+    return lastDigit;
+  }
+
+  const monthTranslation = (birthdayMonthArray) => {
+      if (birthdayMonthArray(birthday) === "January") return `${m[0]}`;
+      if (birthdayMonthArray(birthday) === "February") return `${m[1]}`;
+      if (birthdayMonthArray(birthday) === "March") return `${m[2]}`;
+      if (birthdayMonthArray(birthday) === "April") return `${m[3]}`;
+      if (birthdayMonthArray(birthday) === "May") return `${m[4]}`;
+      if (birthdayMonthArray(birthday) === "June") return`${m[5]}`;
+      if (birthdayMonthArray(birthday) === "July") return `${m[6]}`;
+      if (birthdayMonthArray(birthday) === "August") return `${m[7]}`;
+      if (birthdayMonthArray(birthday) === "September") return `${m[8]}`;
+      if (birthdayMonthArray(birthday) === "October") return `${m[9]}`;
+      if (birthdayMonthArray(birthday) === "November") return `${m[10]}`;
+      if (birthdayMonthArray(birthday) === "December") return `${m[11]}`;
+  }
+ 
+  const dayTranslation = (birthdayDayArray) => {
+    if (birthdayDayArray(birthday) === "1") return `${d[1]}`;
+    if (birthdayDayArray(birthday) === "2") return `${d[2]}`;
+    if (birthdayDayArray(birthday) === "3") return `${d[3]}`;
+    if (birthdayDayArray(birthday) === "4") return `${d[4]}`;
+    if (birthdayDayArray(birthday) === "5") return `${d[5]}`;
+    if (birthdayDayArray(birthday) === "6") return`${d[6]}`;
+    if (birthdayDayArray(birthday) === "7") return `${d[7]}`;
+    if (birthdayDayArray(birthday) === "8") return `${d[8]}`;
+    if (birthdayDayArray(birthday) === "9") return `${d[9]}`;
+    if (birthdayDayArray(birthday) === "0") return `${d[0]}`;
 }
+
+  (birthdayMonthArray(birthday));
+  ((birthdayDayArray(birthday)));
+  const month = (monthTranslation(birthdayMonthArray));
+  const day = (dayTranslation(birthdayDayArray));
+
+  console.log(`${month} ${day}`)
+    
+  } 
+ 
+(getVillainName('December 17'));
