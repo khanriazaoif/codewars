@@ -70,7 +70,7 @@ function getVillainName(birthday){
 
   const birthdayMonthArray = (birthday) => {
     let bDay2 = birthday;
-    console.log(typeof(bDay2));
+    // console.log(typeof(bDay2));
     let bday = bDay2.split(' ');
     let month = bday[0];
     return month;
@@ -79,6 +79,7 @@ function getVillainName(birthday){
   const birthdayDayArray = (birthday) => {
     let bDay2 = birthday;
     let bday = bDay2.split('');
+    // console.log(bday);
     let lastDigit = bday.pop();
     return lastDigit;
   }
